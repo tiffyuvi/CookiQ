@@ -1,0 +1,678 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Prompt", sans-serif;
+}
+
+/* stylings for the whole site */
+html, body {
+    height: 100%;
+    margin: 0; /* Prevent any default margins */
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+img {
+    width: 100%;
+}
+.section-content { 
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/* Navbar styling */
+/* Navbar styling */
+header {
+    background: #C88C56;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+
+header .navbar {
+    display: flex; 
+    padding: 20px;
+    align-items: center; /* Ensure vertical alignment of items */
+    justify-content: space-between;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center; /* Align logo and nav links vertically */
+    gap: 10px;
+    padding: 0; /* Remove any extra padding that could cause misalignment */
+}
+
+#navlogoicon {
+    width: 30px; /* Set the width of the image */
+    height: 30px; /* Set the height of the image */
+    object-fit: contain; /* Ensure the image scales without distortion */
+}
+
+/* Logo text styling */
+.logo-text {
+    color: #ffdbbb;
+    font-size: 200%;
+    font-weight: bold;
+    margin: 0; /* Remove any margin from the logo text */
+}
+
+/* Navbar links */
+.navbar .nav-menu {
+    display: flex;
+    gap: 10px;
+    align-items: center; /* Align nav items vertically */
+    color: #ffdbbb;
+}
+
+.navbar .nav-link {
+    color: #fbd8b9; /* Apply the same color as the logo text */
+    font-family: "Prompt", sans-serif;
+    font-weight: 600; /* Adjust weight for a slightly thinner appearance */
+    transition: background-color 1s ease;
+}
+
+.navbar .nav-link:hover {
+    background: #e4a56e;
+    border-radius: 5px;
+}
+
+/* Menu button display (hidden by default) */
+.navbar :where(#menu-close-button, #menu-open-button) {
+    display: none;
+}
+
+/* Hero Section Styling */
+
+.hero-section {
+    background-image: url("newerbg.PNG");
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    min-height: 100vh; /* Makes the section cover the full viewport height */
+    padding: 100px 30px; /* Spacing for top and sides */
+    color: #fff;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Center text inside the section */
+}
+
+.hero-section .section-content {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+    max-width: 1200px;  /* Adjust if necessary */
+    width: 100%;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Ensure text is centered */
+}
+
+/* Text and Image Container */
+.hero-section .text-and-image {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;  /* Increased gap between text and image */
+    align-items: center;
+    justify-content: center; /* Center content inside the container */
+}
+
+/* Text Content */
+.hero-section .hero-details {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /* Center the text content */
+    justify-content: center; /* Vertically center the text content */
+}
+
+.hero-section .hero-details .title {
+    font-size: 3rem;
+    padding-top: 40px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center; /* Ensure title text is centered */
+    color: #f7d8bc; /* Soft cream color */
+}
+
+.hero-section .hero-details .description {
+    font-size: 1.2rem;
+    color: #fef2ea; /* Muted cream tone for readability */
+    line-height: 1.5; /* Improve text spacing */
+}
+
+/* Button Styling */
+.hero-section .hero-details .buttons {
+    display: flex;
+    gap: 20px; /* Space between buttons */
+    justify-content: center; /* Center buttons horizontally */
+}
+
+.hero-section .hero-details .button {
+    padding: 10px 30px;
+    background-color: #f0ccad; 
+    color: #C88C56;
+    font-size: 1.1rem;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+}
+
+.hero-section .hero-details .button:hover {
+    background-color: #f9e3cf;
+    transform: scale(1.05); /* Slight grow effect on hover */
+}
+
+/* Image Styling */
+.hero-section .hiyapic {
+    max-width: 400px; /* Limit image width */
+    height: auto; /* Ensure image keeps its aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+/* Navbar */
+.navbar .nav-menu .nav-link {
+    color: white;
+    display: block;
+    margin-top: 17px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+/* Contact Info */
+.byme {
+    background-color: #C88C56;
+    color: #f7d8bc;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+
+}
+/* quiz page */
+/* Quiz Page */
+/* General form styling */
+body {
+    background-color: #C88C56; /* Match the form background color */
+    margin: 0;
+    padding: 0;
+}
+/* Make the image smaller and center it */
+.whisk {
+    display: block;
+    margin: 0 auto;
+    width: 350px; /* Adjust size as needed */
+}
+
+/* Style the title */
+.formtitle {
+    text-align: center;
+    color: #f7d8bc; /* Use a light color that complements the theme */
+    font-size: 2rem; /* Adjust font size as needed */
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Style the subtitle */
+.formsub {
+    text-align: center;
+    color: #a06b3c; /* Use the brown color you’ve been using */
+    font-size: 1.2rem; /* Adjust font size as needed */
+    margin-top: 10px;
+}
+form {
+    padding-top: 130px;
+    padding-bottom:30px;
+    padding-left:40px;
+    padding-right:40px;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto; /* Centers form horizontally */ /* Adjust padding to match desired spacing */
+    border: 2px solid #a06b3c; /* Adjust border color to match your theme */
+    border-radius: 8px;
+    background-color: #C88C56;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+form h2 {
+    color: #fddcbf; /* Adjust text color */
+    font-size: 1.25rem;
+    margin: 15px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Question sections */
+form div {
+    margin-bottom: 20px; /* Increased spacing between question blocks */
+    display: flex; /* Align items in a row */
+    align-items: center; /* Align items vertically */
+}
+
+/* Input styling */
+form input[type="radio"],
+form input[type="checkbox"] {
+    appearance: none; /* Removes default styling */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f7d8bc;
+    border-radius: 4px; /* Radio buttons are circular; checkboxes square */
+    outline: none;
+    cursor: pointer;
+    margin-right: 10px; /* Space between input and label */
+    transition: background-color 0.7s ease, transform 0.2s ease;
+}
+
+form input[type="radio"] {
+    border-radius: 50%; /* Radio buttons are circular */
+}
+
+form input[type="radio"]:checked,
+form input[type="checkbox"]:checked {
+    background-color: #f5b277; /* Checked background */
+    border-color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 0 5px #e4a670; /* Glow effect */
+}
+
+/* Input labels */
+form label {
+    font-size: 1rem;
+    color: #f7d8bc;
+    margin-left: 10px; /* Space from the checkbox/radio */
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Hover effects for labels */
+form label:hover {
+    color: #fff;
+    transition: color 0.7s ease; /* Transition effect for color */
+}
+
+
+/* Buttons */
+/* Style the button within the .button-container */
+.button-container button {
+    padding: 10px 30px;
+    background-color: #f0ccad;
+    color: #C88C56;
+    font-size: 1.1rem;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+}
+
+/* Hover effect for the button */
+.button-container button:hover {
+    background-color: #f9e3cf;
+    transform: scale(1.05); /* Slight grow effect on hover */
+}
+
+/* Center the button in the container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Optional: Add space above the button */
+}
+/* Style for text inputs and textarea */
+.form-control {
+    width: 100%; /* Full width of the container */
+    padding: 10px 15px;
+    background-color: #f0ccad; /* Same color as the button */
+    border: 2px solid transparent;
+    border-radius: 25px; /* Rounded corners */
+    font-size: 1rem;
+    color: #C88C56; /* Text color matching the button text */
+    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle inset shadow */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}.form-control::placeholder {
+    color: #C88C56; /* Adjust this to your desired color */
+    font-style: italic; /* Optional: add a different style */
+    opacity: 1; /* Ensures full color visibility */
+}
+
+/* Add focus effect */
+.form-control:focus {
+    border-color: #C88C56; /* Highlight border color on focus */
+    box-shadow: 0px 0px 8px rgba(200, 140, 86, 0.6); /* Glow effect */
+}
+
+/* Optional: Styling for the container for spacing */
+.form-group {
+    margin-bottom: 20px; /* Add space between form groups */
+}
+
+/* Styling for the labels */
+.form-group label {
+    display: block; /* Ensures labels are above inputs */
+    margin-bottom: 8px;
+    font-weight: bold;
+    margin-right: 40px;
+    font-size: 1rem;
+    color: #f7d8bc; /* Neutral color for contrast */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+
+    form h2 {
+        font-size: 1.1rem;
+    }
+
+    form label {
+        font-size: 0.9rem;
+    }
+
+    form button[type="submit"] {
+        font-size: 0.9rem;
+    }
+}
+
+
+#study-tools h3 {
+    color: #dc9c64;
+}
+/*about page*/
+.whywhy {
+    background-color:#C88C56;
+}
+.why-container {
+    display: flex;
+    padding-top: 100px;
+    padding-right: 40px;
+    padding-left: 40px;
+    align-items: center; /* Vertically aligns items */
+    gap: 20px; /* Adds spacing between the image and text */
+    background-color: #C88C56
+}
+.why-image img {
+    max-width: 200px; /* Adjust the image size */
+    height: auto;
+    border-radius: 10px; /* Optional: Add rounded corners */
+    padding-top: 50px;
+}
+.greatimg {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+}
+
+.greatimg img {
+    max-width: 400px;
+}
+.why {
+    flex: 1; /* Allows the text section to take up remaining space */
+    padding-left: 400px;
+}
+.why h2 {
+    color:rgb(173, 108, 68);
+
+}
+.why p {
+    color:rgb(173, 108, 68);
+}
+.why {
+    background: #f7d8bc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle card shadow */
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.why:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.great {
+    background: #d7a172;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle card shadow */
+    padding: 10px;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-top: 30px;
+    margin-top: 30px;
+}
+
+.great:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.great h2 {
+    color: #ffebde;
+}
+.great p {
+    color: #ffebde;
+}
+/* New container for the last section */
+.how-container {
+    display: flex; /* Makes the image and text appear side by side */
+    gap: 20px; /* Adds space between the text and the image */
+    align-items: center; /* Centers the items vertically */
+}
+
+.howimg img {
+    max-width: 350px; /* Adjust the image size */
+    height: auto;
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    padding-top: 50px;
+}
+
+.how {
+    flex: 1; /* Ensures the text box takes up remaining space */
+    background: #f8d0ac;
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 40px;
+    margin-bottom: 30px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.how:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.how h2,
+.how p {
+    color: #C88C56;
+}
+/* Resource Section */
+.cooki-resource-intro {
+    width: 600px; /* Adjust the width as needed */
+    height: auto; /* Keeps the aspect ratio */
+    padding-top: 20px;
+}
+.resources {
+    padding: 50px;
+    background-color:#C88C56;
+
+}
+.smallercards {
+    display: flex; 
+}
+.resources h1 {
+    color: #eeccae;
+    font-size: 4rem;
+
+}
+.resources p {
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 1rem;
+    color: #eeccae;
+}
+.resource-container {
+    padding: 60px 20px;
+    background-color: #C88C56;
+    text-align: center;
+    color: #f4d1b2;
+}
+
+
+/* Card Styling */
+/* Card Styling */
+.carde {
+    background:#C88C56;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.carde:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    background: #C88C56; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+
+}
+
+.card i {
+    font-size: 5rem; /* Increased size */
+    color: #f7d8bc; /* Soft cream color */
+    margin-bottom: 15px;
+    padding-top: 170px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.card h2 {
+    color: #f4f1e8;
+    font-size: 2rem; /* Increased size */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.carde h2 {
+    color: #f7d5b7;
+    font-size: 2rem; /* Increased size */
+    margin-bottom: 15px;
+    text-align: center;
+
+}
+
+.card p {
+    color: #ffebde;
+    font-size: 20px; /* Increased size */
+    margin-bottom: 15px;
+    line-height: 1.6;
+    text-align: center;
+
+
+}
+.carde p {
+    color: #eeccae;
+    font-size: 20px; /* Increased size */
+    margin-bottom: 15px;
+    line-height: 1.6;
+    text-align: center;
+
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 20px;
+    color: #ffebde;
+}
+
+.card li {
+    margin-bottom: 15px; /* Increased space for readability */
+}
+
+.card a {
+    color: #f9caa1;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem; /* Increased size */
+    transition: color 0.3s ease;
+    text-align: center;
+    display: block; /* Ensures link is on its own line */
+}
+
+.card a:hover {
+    color: #f4e9e9;
+    text-decoration: underline;
+
+}
+
+/* Style for the descriptions below links */
+.card li span {
+    display: block; /* Ensure description is on a new line */
+    color: #333; /* Description text color */
+    font-size: 1rem; /* Adjusted size for consistency */
+    margin-top: 5px; /* Space between link and description */
+}
+
+/* Section-specific Styling */
+.subject-specific {
+    margin-top: 40px;
+}
+
+.subject-specific h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .resources {
+        grid-template-columns: 1fr;
+    }
+}
+
+
